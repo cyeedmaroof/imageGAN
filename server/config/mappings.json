@@ -1,0 +1,128 @@
+{
+  "cloudant_apikey": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.apikey",
+      "file:/server/localdev-config.json:$.cloudant_apikey"
+    ]
+  },
+  "cloudant_host": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.host",
+      "file:/server/localdev-config.json:$.cloudant_host"
+    ]
+  },
+  "cloudant_iam_apikey_description": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.iam_apikey_description",
+      "file:/server/localdev-config.json:$.cloudant_iam_apikey_description"
+    ]
+  },
+  "cloudant_iam_apikey_name": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.iam_apikey_name",
+      "file:/server/localdev-config.json:$.cloudant_iam_apikey_name"
+    ]
+  },
+  "cloudant_iam_role_crn": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.iam_role_crn",
+      "file:/server/localdev-config.json:$.cloudant_iam_role_crn"
+    ]
+  },
+  "cloudant_iam_serviceid_crn": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.iam_serviceid_crn",
+      "file:/server/localdev-config.json:$.cloudant_iam_serviceid_crn"
+    ]
+  },
+  "cloudant_password": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.password",
+      "file:/server/localdev-config.json:$.cloudant_password"
+    ]
+  },
+  "cloudant_port": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.port",
+      "file:/server/localdev-config.json:$.cloudant_port"
+    ]
+  },
+  "cloudant_url": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.url",
+      "file:/server/localdev-config.json:$.cloudant_url"
+    ]
+  },
+  "cloudant_username": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.username",
+      "file:/server/localdev-config.json:$.cloudant_username"
+    ]
+  },
+  "cloudant_serviceInfo": {
+    "searchPatterns": [
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.serviceInfo",
+      "file:/server/localdev-config.json:$.cloudant_serviceInfo"
+    ]
+  },
+  "push_apikey": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.apikey",
+      "file:/server/localdev-config.json:$.push_apikey"
+    ]
+  },
+  "push_appGuid": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.appGuid",
+      "file:/server/localdev-config.json:$.push_appGuid"
+    ]
+  },
+  "push_clientSecret": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.clientSecret",
+      "file:/server/localdev-config.json:$.push_clientSecret"
+    ]
+  },
+  "push_iam_apikey_description": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.iam_apikey_description",
+      "file:/server/localdev-config.json:$.push_iam_apikey_description"
+    ]
+  },
+  "push_iam_apikey_name": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.iam_apikey_name",
+      "file:/server/localdev-config.json:$.push_iam_apikey_name"
+    ]
+  },
+  "push_iam_role_crn": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.iam_role_crn",
+      "file:/server/localdev-config.json:$.push_iam_role_crn"
+    ]
+  },
+  "push_iam_serviceid_crn": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.iam_serviceid_crn",
+      "file:/server/localdev-config.json:$.push_iam_serviceid_crn"
+    ]
+  },
+  "push_plan": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.plan",
+      "file:/server/localdev-config.json:$.push_plan"
+    ]
+  },
+  "push_url": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.url",
+      "file:/server/localdev-config.json:$.push_url"
+    ]
+  },
+  "push_serviceInfo": {
+    "searchPatterns": [
+      "cloudfoundry:$['imfpush'][0].credentials.serviceInfo",
+      "file:/server/localdev-config.json:$.push_serviceInfo"
+    ]
+  }
+}

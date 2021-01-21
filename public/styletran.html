@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+  
+  <title>URL.createObjectURL example</title>
+  <style>
+	.myDiv {
+  	border: 3px outset blue;
+  	background-color: lightblue;
+	width: "200px";
+	text-align: center;
+	}
+  </style>
+  <style>
+	.my {
+  	border: 3px outset blue;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	}
+  </style>
+
+</head>
+<body align="center">
+
+
+    	<div class="myDiv" align="center" >
+	<br><h5>Choose Content image.</h5><br>
+        <input type="file" id="size"><br><br>
+        <h5>Choose style image.</h5><br>
+        <input type="file" id="size2"><br><br>
+        <input type="submit" id="submit">
+	<br>
+	</div>
+	<br>
+	<div id="stuff">
+        <img scr="#" id="pre" class="my">
+        </div>
+    
+    
+
+
+<script>
+const input = document.getElementById('submit');
+const dwn = document.getElementById('download');
+
+input.addEventListener('click', test1);
+
+async function test1() {
+deepai.setApiKey('your api-key');
+
+
+
+    (async function(){
+      var resp = await deepai.callStandardApi("fast-style-transfer", {
+            content: document.getElementById("size"),
+            style: document.getElementById("size2"),
+      });
+      var ot=resp['output_url'];
+      console.log(ot);
+    
+      document.getElementById('pre').src=resp['output_url'];
+    
+    })();
+}
+
+</script>
+  
+</body>
+</html>

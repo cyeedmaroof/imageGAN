@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+  
+  <title>URL.createObjectURL example</title>
+  <style>
+	.myDiv {
+  	border: 3px outset blue;
+  	background-color: lightblue;
+	width: "200px";
+	text-align: center;
+	}
+  </style>
+  <style>
+	.my {
+  	border: 3px outset blue;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	}
+  </style>
+
+</head>
+<body align="center">
+
+
+    	<div class="myDiv" align="center" >
+	<br>
+        <input type="file" id="size"><br><br>
+        <input type="submit" id="submit">
+	<br>
+	</div>
+	<br>
+	<div id="stuff">
+        <img scr="#" id="pre" class="my">
+        </div>
+    
+    
+
+
+<script>
+const input = document.getElementById('submit');
+const dwn = document.getElementById('download');
+
+var url_string = window.location.href;
+var url = new URL(url_string);
+var c = url.searchParams.get("id");
+console.log(c);
+
+input.addEventListener('click', test1);
+
+async function test1() {
+deepai.setApiKey('your api-key');
+
+if(c==2){
+
+    (async function(){
+      var resp = await deepai.callStandardApi("torch-srgan", {
+            image: document.getElementById("size"),
+      });
+      var ot=resp['output_url'];
+      console.log(ot);
+    
+      document.getElementById('pre').src=resp['output_url'];
+    
+    })();
+}
+else if (c==1) {
+  (async function(){
+      var resp = await deepai.callStandardApi("colorizer", {
+            image: document.getElementById("size"),
+      });
+      var ot=resp['output_url'];
+      console.log(ot);
+    
+      document.getElementById('pre').src=resp['output_url'];
+    
+    })();
+  
+}
+else if (c==3) {
+  (async function(){
+      var resp = await deepai.callStandardApi("colorizer", {
+            image: document.getElementById("size"),
+      });
+      var ot=resp['output_url'];
+      console.log(ot);
+    
+      document.getElementById('pre').src=resp['output_url'];
+    
+    })();
+  
+}
+else if (c==4) {
+  (async function(){
+      var resp = await deepai.callStandardApi("neuraltalk", {
+            image: document.getElementById("size"),
+      });
+      //var ot=resp['output_url'];
+      console.log(resp);
+    
+      document.getElementById('pre').src=resp['output_url'];
+    
+    })();
+  
+}
+
+}
+ 
+
+
+
+
+</script>
+  
+</body>
+</html>
